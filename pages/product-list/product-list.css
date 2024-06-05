@@ -1,0 +1,106 @@
+body{
+  font-family: "Nunito", sans-serif;
+}
+
+.container-cart h2 {
+  font-size: 2.5rem;
+}
+.container-cart h3 {
+  font-size: 1.5rem;
+}
+
+.cart-item-details {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.cart-item-image {
+  width: 20rem;
+  border-radius: 10px;
+}
+.cart-items {
+  display: flex;
+  gap: 2rem;
+}
+.cart-item-details .quantity,
+.price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart-item-details div h3 {
+  font-size: 1rem;
+  max-width: 25rem;
+  font-weight: 300;
+}
+
+.cart-item-details .quantity input {
+  max-width: 3rem;
+}
+
+.remove {
+  display: inline-block;
+}
+
+#subtotal-cart{
+  background-color: #5c564b;
+  color: rgb(255, 255, 255);
+  border-radius: 2rem;
+  padding: 2rem 4rem;
+
+  h1{
+    font-size: 2.5rem;
+    border-top: 2px solid white;
+    padding-top: 0.5rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+
+#container-info-total {
+  margin-top: 2rem;
+  display: flex;
+  gap: 9rem;
+  align-items: center;
+  max-width: 1240px;
+}
+
+.adress{
+  padding: 1rem;
+  color: black;
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+  }
+
+  .cep {
+    border-bottom: 2px solid black;
+  }
+
+  .buttons {
+    margin: 2rem 0 2rem 0;
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+
+.concluir-compra{
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  margin-top: 3rem;
+
+    a {
+      color: white;
+    }
+}

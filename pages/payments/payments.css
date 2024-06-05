@@ -1,0 +1,161 @@
+.logo {
+  display: flex;
+  justify-content: center;
+
+  a {
+    color: white;
+  }
+}
+
+main #payment-data {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-weight: 600;
+
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+
+#address-form {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.buttons {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#back {
+  color: white;
+}
+.payment-options-section {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.payment-option {
+  background: #5c564b;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem;
+  width: 5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#card-form {
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+#payment-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#paypal-button {
+  background-color: lightblue ;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.mensage {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.cart-container {
+  background-color: #5c564b;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: "Nunito", sans-serif;
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 5px;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.cart-container p, #subtotal-cart p{
+ text-align: right;
+}
+
+#subtotal-cart{
+  border-top: 2px solid rgb(255, 255, 255);
+}
+
+.container-input{
+  display: flex;
+  flex-direction: column;
+}
+
+.container-input input{
+  background-color: #897F6D;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+#cartList-products{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#card-form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.container-input:last-child {
+  grid-column: 1 / -1;
+}
+.container-input-parcelas{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.confirmDiv{
+  background-color: #5c564b;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.voltar {
+  margin: 1.5rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  #payment-data {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  main #payment-data {
+    padding: 0.5rem 2%;
+  }
+}

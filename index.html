@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco&Commerce</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="./styles/global.css">
+  <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="/pages/products/products.css">
+</head>
+
+<body>
+  <header>
+    <nav id="navbar">
+      <section class="hd-grid">
+        <div class="left-icons">
+          <div class="hamburger-menu">
+          </div>
+          <span class="material-symbols-outlined">search</span>
+        </div>
+
+        <a href="./index.html" class="logo">Eco&Commerce</a>
+
+        <div class="right-icons">
+          <a href="./pages/login/login.html"><span class="material-symbols-outlined">person</span></a>
+          <a href="#" id="cartToggle"><span class="material-symbols-outlined">shopping_cart</span></a>
+          <a href="#"><span class="material-symbols-outlined">favorite</span></a>
+        </div>
+      </section>
+      <ul class="categorias">
+        <li><a href="./pages/products/products.html?category=clothes">Roupas</a></li>
+        <li><a href="./pages/products/products.html?category=cosmetics">Cosméticos</a></li>
+        <li><a href="./pages/products/products.html?category=materials">Materiais</a></li>
+        <li><a href="./pages/products/products.html?category=handmade">Artesanato</a></li>
+        <li><a href="./pages/products/products.html?category=plants">Plantas</a></li>
+        <li><a href="./pages/products/products.html?category=furniture">Móveis</a></li>
+      </ul>
+
+    </nav>
+  </header>
+  <main>
+    <section class="slide-container">
+      <div class="slide">
+        <img src="./imgs/img-descontos.png">
+        <div class="legenda">
+          <h2>Crie sua conta</h2>
+          <p>Faça login agora e tenha acesso a descontos de até 50% em todo site.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="./imgs/img-frete.png">
+        <div class="legenda">
+          <h2>Frete Grátis</h2>
+          <p>Aproveite compras e devoluções gratuitas em nosso site.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="./imgs/img-essencia.jpg">
+        <div class="legenda">
+          <h2>Nossa Essência</h2>
+          <p>Amor, carinho e sustentabilidade em cada detalhe.</p>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="./imgs/img-excelencia.jpg">
+        <div class="legenda">
+          <h2>Excelência Verde</h2>
+          <p>Produtos de alta qualidade, ambientalmente conscientes.</p>
+        </div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </section>
+
+    <div class="paginacao">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <h2 class="subtitle">produtos em destaque</h2>
+    <section class="destaque-produtos">
+      <div class="produto">
+        <div class="container-sale"></div>
+        <img src="/imgs/artesanato-bolsa.jpg" alt="img">
+        <h1>Bolsa de Crochê</h1>
+        <div class="grid-preco">
+          <p>R$30</p>
+          <a href="/pages/product-details/product-details.html?id=19"><button>Ver produto</button></a>
+        </div>
+      </div>
+      
+      <div class="produto">
+        <img src="/imgs/cosmeticos-1.jpg" alt="img">
+        <h1>Shampoo e Condicionador</h1>
+        <div class="grid-preco">
+          <p>R$85.75</p>
+          <a href="/pages/product-details/product-details.html?id=15"><button>Ver produto</button></a>
+        </div>
+      </div>
+
+      <div class="produto">
+        <img src="/imgs/pantalona-verde.png" alt="img">
+        <h1>Pantalona Verde</h1>
+        <div class="grid-preco">
+          <p>R$55.95</p>
+          <a href="/pages/product-details/product-details.html?id=1"><button>Ver produto</button></a>
+        </div>
+      </div>
+
+      <div class="produto">
+        <img src="/imgs/materiais-1.jpg" alt="img">
+        <h1>Envelope</h1>
+        <div class="grid-preco">
+          <p>R$15.99</p>
+          <a href="/pages/product-details/product-details.html?id=9"><button>Ver produto</button></a>
+        </div>
+      </div>
+      
+      <div class="produto">
+        <img src="/imgs/plantas-2.jpg" alt="img">
+        <h1>Adubo</h1>
+        <div class="grid-preco">
+          <p>R$15.99</p>
+          <a href="/pages/product-details/product-details.html?id=8"><button>Ver produto</button></a>
+        </div>
+      </div>
+
+      <div class="produto">
+        <img src="/imgs/moveis-sofa2.jpg" alt="img">
+        <h1>Conjunto de Sofá e Banco</h1>
+        <div class="grid-preco">
+          <p>R$150.92</p>
+          <a href="/pages/product-details/product-details.html?id=21"><button>Ver produto</button></a>
+        </div>
+      </div>
+
+    </section>
+
+    <aside id="cartAside" class="cart-aside">
+      <div class="carrinho-close">
+        <button class="close-button">X</button>
+        <h2 class="quantity-cart"></h2>
+      </div>
+
+      <div class="container-cart">
+        <ul id="cartList"></ul>
+        <h4 id="subtotal-cartAside"></h4>
+        <a href="./pages/product-list/product-list.html" class="finish">Concluir compra</a>
+      </div>
+    </aside>
+
+    <div id="voltar-inicio">
+      <h2><a href="#navbar">Voltar ao Início</a></h2>
+    </div>
+    <div id="cartPopup" class="cart-popup"></div>
+  </main>
+
+  <footer>
+    <section>
+      <ul class="nossa-empresa">
+        <li>
+          <h2>Nossa Empresa</h2>
+        </li>
+        <li><a href="#">Sustentabilidade</a></li>
+        <li><a href="#">Sobre o Eco&Commerce</a></li>
+        <li><a href="#">Políticas de Privacidade</a></li>
+        <li><a href="#">Termo e Condições Gerais de Uso</a></li>
+        <li><a href="#">Políticas de Troca e Devolução</a></li>
+        <li><a href="#">Newletter</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+      <ul class="atendimento">
+        <li>
+          <h2>Atendimento</h2>
+        </li>
+        <li><a href="#">Políticas de Pagamento</a></li>
+        <li><a href="#">Entre em Contato</a></li>
+        <li><a href="#">Centro de Preferência</a></li>
+        <li><a href="#">Perguntas Frequentes</a></li>
+        <li><a href="#">Acessibilidade</a></li>
+        <li><a href="#">Ajuda</a></li>
+      </ul>
+      <ul id="redes-sociais">
+        <li><a href="#"><img src="./imgs/Icons/instagram.svg" /></a></li>
+        <li><a href="#"><img src="./imgs/Icons/facebook.svg" /></a></li>
+        <li><a href="#"><img src="./imgs/Icons/twitter.svg" /></a></li>
+        <li><a href="#"><img src="./imgs/Icons/tiktok.svg" /></a></li>
+      </ul>
+    </section>
+    <div id="direitos-reservados">
+      <p>© ECO&COMMERCE 2024 - Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+  <script src="./scripts/index.js"></script>
+  <script src="./scripts/store.js"></script>
+  <script src="./scripts/data/products.js"></script>
+  <script src="./pages/products/products.js"></script>
+  <script src="./scripts/cart.js"></script>
+  <script src="./scripts/popup.js"></script>
+  <script src="./scripts/mobile-menu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+.product-card {
+  display: flex;
+  border: none;
+  text-align: left;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 1rem 0rem 1rem 0rem;
+}
+
+.informations {
+  font-family: "Nunito", sans-serif;
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  .description {
+    font-size: 1.4rem;
+  }
+}
+
+.product-card img {
+  width: 200rem;
+  max-height: 32rem;
+  border-radius: 1rem;
+}
+
+.product-card .stars {
+  font-size: 2rem;
+}
+
+.product-card .rating {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+.buy-card {
+  background-color: #5c564b;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.buy-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  .preço {
+    font-size: 2rem;
+    color: white;
+  }
+  .parcelado {
+    font-size: 1rem;
+    color: white;
+  }
+
+  .icon {
+    color: white;
+    
+    .material-symbols-outlined {
+      font-size: 2.2rem;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    button {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.add a {
+  color: white;
+}
+
+.container-sale {
+  position: relative;
+  right: -43%;
+  top: 2%;
+}
+.container-sale p {
+  font-size: 2rem;
+}

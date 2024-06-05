@@ -1,0 +1,11 @@
+@import "./header.css";
+@import "./footer.css";
+@import "./main.css";
+@import url("https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}

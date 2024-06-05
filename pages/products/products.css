@@ -1,0 +1,31 @@
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 1rem 0rem 1rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.product-card {
+  border-radius: 1.2rem;
+  width: 16rem;
+  height: auto;
+}
+
+.product-card img {
+  width: 16rem;
+  height: 55%;
+  border-radius: 1rem;
+}
+
+.product-card h2 {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 1.7rem;
+  min-height: 1rem;
+  margin: 0.2rem;
+}

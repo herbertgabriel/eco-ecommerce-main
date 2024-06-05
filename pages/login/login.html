@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eco&Commerce</title>
+    <link rel="stylesheet" href="../../styles/global.css">
+    <link rel="stylesheet" href="./login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+
+<body>
+    <a href="/eco-ecommerce-main/index.html" class="logo">Eco&Commerce</a>
+
+    <section class="containers" id="containers">
+        <div class="container-form cadastro">
+            <form>
+                <h1>Cadastre-se</h1>
+                <div class="rede-social">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+                <input type="text" placeholder="Nome" />
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Senha" />
+                <button>Cadastrar</button>
+            </form>
+        </div>
+
+        <div class="container-form login">
+            <form>
+                <h1>Login</h1>
+                <div class="rede-social">
+                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                    <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Senha" />
+                <a href="#">Esqueceu sua senha?</a>
+                <button>Entrar</button>
+            </form>
+        </div>
+
+        <div class="alternar-container">
+            <div class="alternar">
+                <div class="alternar-painel alternar-esquerda">
+                    <h1>Bem-vindo de volta!</h1>
+                    <p>Faça login e continue sua jornada sustentável!</p>
+                    <button class="hidden" id="login">Fazer Login</button>
+                </div>
+
+                <div class="alternar-painel alternar-direita">
+                    <h1>Novo por aqui?</h1>
+                    <p>Junte-se a nós e ajude a construir um futuro mais verde!</p>
+                    <button class="hidden" id="cadastrar">Cadastre-se</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button><a href="../../index.html">Voltar</a></button>
+
+    <script src="./login.js"></script>
+
+</body>
+
+</html>
