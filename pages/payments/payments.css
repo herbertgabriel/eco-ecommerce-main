@@ -71,7 +71,7 @@ main #payment-data {
 }
 
 #paypal-button {
-  background-color: lightblue ;
+  background-color: lightblue;
   border: none;
   padding: 0.5rem;
   border-radius: 5px;
@@ -95,45 +95,46 @@ main #payment-data {
   margin: 0 auto;
 }
 
-.cart-container p, #subtotal-cart p{
- text-align: right;
+.cart-container p,
+#subtotal-cart p {
+  text-align: right;
 }
 
-#subtotal-cart{
+#subtotal-cart {
   border-top: 2px solid rgb(255, 255, 255);
 }
 
-.container-input{
+.container-input {
   display: flex;
   flex-direction: column;
 }
 
-.container-input input{
-  background-color: #897F6D;
+.container-input input {
+  background-color: #897f6d;
   border: 2px solid black;
   border-radius: 5px;
   padding: 0.5rem;
 }
 
-#cartList-products{
+#cartList-products {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-#card-form{
+#card-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 .container-input:last-child {
   grid-column: 1 / -1;
 }
-.container-input-parcelas{
-  display:flex;
+.container-input-parcelas {
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
-.confirmDiv{
+.confirmDiv {
   background-color: #5c564b;
   border-radius: 1rem;
   padding: 2rem;

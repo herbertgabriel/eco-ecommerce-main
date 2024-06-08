@@ -25,21 +25,26 @@ main .route {
 
 .cart-aside {
   position: fixed;
-  top: 60px;
+  top: 150px;
   right: -450px;
-  width: 100%; 
+  width: 100vw;
   max-width: 400px;
   background-color: white;
-  height: 100vh;
+  max-height: 100%;
   padding: 1rem;
   transition: right 0.75s;
   z-index: 1;
   border-radius: 5px;
   overflow: auto;
 }
+@media screen and (max-width: 768px) {
+  .cart-aside {
+    width: 15rem;
+  }
+}
 
 #cartList {
-  max-height: 43rem;
+  max-height: 400px;
   overflow-y: auto;
 }
 
@@ -321,4 +326,3 @@ button.close-button {
   color: gold;
   font-size: 2rem;
 }
-

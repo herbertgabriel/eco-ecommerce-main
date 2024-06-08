@@ -19,7 +19,7 @@ function renderCheckoutCart() {
         <div class="cart-items">
         <div>
             <h2>${product.title}</h2>
-            <h3>${product.description}</h3>
+            <h3 class="product-discription">${product.description}</h3>
         </div>
         <div class="quantity">
         <h2>Quantidade</h2>
