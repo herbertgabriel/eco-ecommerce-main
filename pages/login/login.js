@@ -1,23 +1,17 @@
-const container = document.getElementById("containers");
-const registerBtn = document.getElementById("cadastrar");
-const loginBtn = document.getElementById("login");
-
-registerBtn.addEventListener("click", () => {
-  container.classList.add("active");
-});
-
-loginBtn.addEventListener("click", () => {
-  container.classList.remove("active");
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  const forms = document.querySelectorAll("form");
-
-  forms.forEach(function (form) {
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-
-      window.location.href = "../payments/payments.html";
+const signinForm = document.querySelector("form.signin");
+const signinBtn = document.querySelector("label.signin");
+const signupBtn = document.querySelector("label.signup");
+const signupLink = document.querySelector("form .signup-link a");
+    
+    signupBtn.onclick = (()=>{
+      signinForm.style.marginLeft = "-50%";
     });
-  });
-});
+    
+    signinBtn.onclick = (()=>{
+      signinForm.style.marginLeft = "0%";
+    });
+    
+    signupLink.onclick = (()=>{
+      signupBtn.click();
+      return false;
+    });

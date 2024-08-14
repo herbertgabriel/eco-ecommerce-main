@@ -6,21 +6,31 @@
     color: white;
   }
 }
+body {
+  background-color: #d0b098;
+}
 
 main #payment-data {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: 1rem;
   font-family: "Nunito", sans-serif;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   font-weight: 600;
 
   h1 {
     text-align: center;
     font-size: 2rem;
   }
+}
+
+fieldset {
+  border-color: #544439;
+  border-radius: 0.5rem;
+}
+
+fieldset legend {
+  font-size: 2rem;
+  text-align: center;
 }
 
 #address-form {
@@ -40,6 +50,7 @@ main #payment-data {
 #back {
   color: white;
 }
+
 .payment-options-section {
   padding: 1rem;
   display: flex;
@@ -48,7 +59,7 @@ main #payment-data {
 }
 
 .payment-option {
-  background: #5c564b;
+  background: #544439;
   color: white;
   font-size: 1rem;
   padding: 0.5rem;
@@ -71,10 +82,24 @@ main #payment-data {
 }
 
 #paypal-button {
-  background-color: lightblue;
+  background-image: url("https://i0.wp.com/danabalicki.com/wp-content/uploads/2016/06/paypal-button-blue.png?ssl=1");
+  background-size: cover;
+  background-repeat: no-repeat;
   border: none;
   padding: 0.5rem;
   border-radius: 5px;
+  width: 8rem;
+  height: 3rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+#paypal-button:hover {
+  opacity: 80%;
+}
+
+#pixis,
+#boletus {
+  margin-bottom: 1rem;
 }
 
 .mensage {
@@ -83,7 +108,7 @@ main #payment-data {
 }
 
 .cart-container {
-  background-color: #5c564b;
+  background-color: #544439;
   color: white;
   display: flex;
   flex-direction: column;
@@ -110,10 +135,11 @@ main #payment-data {
 }
 
 .container-input input {
-  background-color: #897f6d;
-  border: 2px solid black;
+  background-color: rgb(84, 68, 57);
+  border: 2px solid rgb(84, 68, 57);
   border-radius: 5px;
   padding: 0.5rem;
+  color: white;
 }
 
 #cartList-products {
@@ -131,17 +157,31 @@ main #payment-data {
 }
 .container-input-parcelas {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 1rem;
 }
+
+#installments {
+  background-color: #f7e9d7;
+  width: 8rem;
+  height: 2rem;
+  border-radius: 10px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  border-style: none;
+  text-align: center;
+}
+
 .confirmDiv {
-  background-color: #5c564b;
+  background-color: #736053;
   border-radius: 1rem;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  color: white;
 }
 
 .voltar {
@@ -150,13 +190,60 @@ main #payment-data {
 }
 
 @media screen and (max-width: 768px) {
+  fieldset {
+    padding: 3rem;
+    border-style: none;
+  }
+  .cart-container {
+    padding: 5rem;
+  }
   #payment-data {
     flex-direction: column;
+  }
+  #address-form {
+    padding: 0rem;
+  }
+  .cart-container {
+    border-radius: 0px;
+  }
+  .buttons {
+    margin: 2rem;
+  }
+  .confirmDiv {
+    margin: 0;
+    padding: 0;
   }
 }
 
 @media screen and (max-width: 480px) {
   main #payment-data {
-    padding: 0.5rem 2%;
+    flex-direction: column;
   }
+}
+
+#payment-section {
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8rem;
+}
+.cart {
+  margin-left: 1rem;
+  margin-top: 1.3rem;
+}
+
+.invalid {
+  border: 1px solid rgb(209, 13, 13);
+  background-color: #fdd;
+}
+.invalid-label {
+  color: rgb(209, 13, 13);
+}
+
+.buttons a {
+  color: rgb(255, 255, 255);
+}
+.confirm .buttons button {
+  color: white;
 }

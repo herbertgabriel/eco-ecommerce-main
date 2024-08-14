@@ -8,64 +8,68 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function createForm() {
     adressDiv.innerHTML = `
-      <h1>Entrega</h1>
-      <form id="address-form">
-        <div class="container-input">
-          <label for="full-name">Nome Completo*</label>
-          <input type="text" id="full-name" name="full-name" required>
-        </div>
+      <fieldset>
+        <legend>Entrega</legend>
+        <form id="address-form">
+          <div class="container-input">
+            <label for="full-name">Nome Completo*</label>
+            <input type="text" id="full-name" name="full-name" required>
+          </div>
 
-        <div class="container-input">
-          <label for="phone">Nº Telefone*</label>
-          <input type="text" id="phone" name="phone" required>
-        </div>
+          <div class="container-input">
+            <label for="phone">Nº Telefone*</label>
+            <input type="text" id="phone" name="phone" required>
+          </div>
 
-        <div class="container-input">
-          <label for="cep">CEP*</label>
-          <input type="text" id="cep" name="cep" required>
-        </div>
+          <div class="container-input">
+            <label for="cep">CEP*</label>
+            <input type="text" id="cep" name="cep" required>
+          </div>
 
-        <div class="container-input">
-          <label for="state">Estado*</label>
-          <input type="text" id="state" name="state" required>
-        </div>
+          <div class="container-input">
+            <label for="state">Estado*</label>
+            <input type="text" id="state" name="state" required>
+          </div>
 
-        <div class="container-input">
-          <label for="city">Cidade *</label>
-          <input type="text" id="city" name="city" required>
-        </div>
+          <div class="container-input">
+            <label for="city">Cidade *</label>
+            <input type="text" id="city" name="city" required>
+          </div>
 
-        <div class="container-input">
-          <label for="address">Endereço *</label>
-          <input type="text" id="address" name="address" required>
-        </div>
+          <div class="container-input">
+            <label for="address">Endereço *</label>
+            <input type="text" id="address" name="address" required>
+          </div>
 
-        <div class="container-input">
-          <label for="address">Número *</label>
-          <input type="text" id="address" name="address" required>
-        </div>
+          <div class="container-input">
+            <label for="number">Número *</label>
+            <input type="text" id="number" name="number" required>
+          </div>
 
-        <div class="container-input">
-          <label for="address">Complemento *</label>
-          <input type="text" id="address" name="address" required>
-        </div>
+          <div class="container-input">
+            <label for="complement">Complemento</label>
+            <input type="text" id="complement" name="complement">
+          </div>
 
-        <div class="container-input">
-          <label for="address">Referência *</label>
-          <input type="text" id="address" name="address" required>
-        </div>
-      </form>
+          <div class="container-input">
+            <label for="reference">Referência *</label>
+            <input type="text" id="reference" name="reference" required>
+          </div>
+        </form>
+      </fieldset>
     `;
 
     infosPaymentsDiv.innerHTML = `
-      <h1>Informações de Pagamento</h1>
-      <section class="payment-options-section">
-        <button type="button" class="payment-option" id="card">Cartão</button>
-        <button type="button" class="payment-option" id="paypal">PayPal</button>
-        <button type="button" class="payment-option" id="pix">Pix</button>
-        <button type="button" class="payment-option" id="boleto">Boleto</button>
-      </section>
-      <div id="payment-form-container"></div>
+      <fieldset>
+        <legend>Forma de Pagamento</legend>
+        <section class="payment-options-section">
+          <button type="button" class="payment-option" id="card">Cartão</button>
+          <button type="button" class="payment-option" id="paypal">PayPal</button>
+          <button type="button" class="payment-option" id="pix">Pix</button>
+          <button type="button" class="payment-option" id="boleto">Boleto</button>
+        </section>
+        <div id="payment-form-container"></div>
+      </fieldset>
     `;
 
     cart.innerHTML = `
@@ -74,8 +78,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <h3 id="subtotal-cart"></h3>
       </div>
       <div class="buttons">
-        <button type="button" id="back-to-address" class="btn-hover-white">Cancelar</button>
-        <button type="button" id="confirm-payment" class="add">Confirmar</button>
+        <button type="button" id="back-to-address" class="btn-hover-white"><a href=".././product-list/product-list.html">Cancelar</a></button>
+        <button type="button" id="confirm-payment" class="btn-hover-white">Confirmar</button>
       </div>
     `;
 
@@ -84,6 +88,10 @@ document.addEventListener("DOMContentLoaded", () => {
       .forEach((button) => {
         button.addEventListener("click", handlePaymentOptionClick);
       });
+
+    document
+      .getElementById("confirm-payment")
+      ?.addEventListener("click", showConfirmation);
 
     renderCartInPaymentOptions();
   }
@@ -140,18 +148,18 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="container-input-parcelas">
             <label for="installments">Parcelas*</label>
             <select id="installments" name="installments" required>
-              <option value="1">1 parcela</option>
-              <option value="2">2 parcelas</option>
-              <option value="3">3 parcelas</option>
-              <option value="4">4 parcelas</option>
-              <option value="5">5 parcelas</option>
-              <option value="6">6 parcelas</option>
-              <option value="7">7 parcelas</option>
-              <option value="8">8 parcelas</option>
-              <option value="9">9 parcelas</option>
-              <option value="10">10 parcelas</option>
-              <option value="11">11 parcelas</option>
-              <option value="12">12 parcelas</option>
+              <option value="1">1x (Sem juros)</option>
+              <option value="2">2x (Sem juros)</option>
+              <option value="3">3x (Sem juros)</option>
+              <option value="4">4x (Sem juros)</option>
+              <option value="5">5x (Sem juros)</option>
+              <option value="6">6x (Sem juros)</option>
+              <option value="7">7x</option>
+              <option value="8">8x</option>
+              <option value="9">9x</option>
+              <option value="10">10x</option>
+              <option value="11">11x</option>
+              <option value="12">12x</option>
             </select>
             </div>
             </div>
@@ -160,17 +168,17 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (selectedOption === "paypal") {
       paymentFormContainer.innerHTML = `
           <h2>Pagamento com PayPal</h2>
-          <button type="button" id="paypal-button" class="button-continue">Pagar com PayPal</button>
+          <button type="button" id="paypal-button" class="button-continue"></button>
         `;
     } else if (selectedOption === "pix") {
       paymentFormContainer.innerHTML = `
           <h2>Pagamento com Pix</h2>
-          <img src="./images/pix-qr-code.png" alt="QR Code Pix">
+          <img src="./imgs/qr-code.png" alt="QR Code Pix" id="pixis">
         `;
     } else if (selectedOption === "boleto") {
       paymentFormContainer.innerHTML = `
           <h2>Pagamento com Boleto</h2>
-          <img src="./images/boleto.png" alt="Boleto">
+          <img src="./imgs/boleto.png" alt="Boleto" id="boletus">
         `;
     }
 
@@ -180,16 +188,50 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function showConfirmation() {
-    const infosPaymentsDiv = document.querySelector(".infos-payments");
-    const confirmDiv = document.querySelector(".confirm");
-    const cart = document.querySelector(".cart");
+    const addressForm = document.getElementById("address-form");
+    const cardForm = document.getElementById("card-form");
+
+    // Remove previous error styles
+    addressForm.querySelectorAll("input").forEach(input => input.classList.remove("invalid"));
+    addressForm.querySelectorAll("label").forEach(label => label.classList.remove("invalid-label"));
+    if (cardForm) {
+      cardForm.querySelectorAll("input").forEach(input => input.classList.remove("invalid"));
+      cardForm.querySelectorAll("label").forEach(label => label.classList.remove("invalid-label"));
+    }
+
+    let hasErrors = false;
+
+    addressForm.querySelectorAll("input[required]").forEach(input => {
+      const label = addressForm.querySelector(`label[for="${input.id}"]`);
+      if (input.value.trim() === "") {
+        input.classList.add("invalid");
+        if (label) label.classList.add("invalid-label");
+        hasErrors = true;
+      }
+    });
+
+    if (document.getElementById("card")?.classList.contains("selected")) {
+      cardForm.querySelectorAll("input[required]").forEach(input => {
+        const label = cardForm.querySelector(`label[for="${input.id}"]`);
+        if (input.value.trim() === "") {
+          input.classList.add("invalid");
+          if (label) label.classList.add("invalid-label");
+          hasErrors = true;
+        }
+      });
+    }
+
+    if (hasErrors) {
+      console.log("Por favor, preencha todos os campos obrigatórios.");
+      return;
+    }
+
+    const fullName = document.getElementById("full-name").value;
+    const address = document.getElementById("address").value;
 
     infosPaymentsDiv.style.display = "none";
     adressDiv.style.display = "none";
     cart.style.display = "none";
-
-    const fullName = document.getElementById("full-name").value;
-    const address = document.getElementById("address").value;
 
     confirmDiv.innerHTML = `
         <div class="confirmDiv">
@@ -199,10 +241,11 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="buttons">
             <button type="button" class="btn-hover-white">Visualizar pedido</button>
             <button type="button" class="btn-hover-white">Rastrear pedido</button>
+            
           </div>
         </div>
         <div class="voltar">
-          <a href="../../../index.html"><button type="button" class="add">Voltar pra Página Inicial</button></a>
+          <a href="../../../index.html"><button type="button"class="btn-hover-white">Voltar pra Página Inicial</button></a>
         </div>
       `;
   }

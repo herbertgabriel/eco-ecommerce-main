@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function handleWindowResize() {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 920) {
       addHamburgerMenuButton();
     } else {
       removeHamburgerMenuButtons();

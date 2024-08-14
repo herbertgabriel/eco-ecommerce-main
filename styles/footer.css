@@ -1,35 +1,33 @@
 footer {
-  background-color: #897f6d;
+  background-color: #534236;
 }
 
-footer section {
+footer #about {
   display: flex;
-  padding: 1.5rem;
+  padding: 0.8rem;
   justify-content: center;
   gap: 5%;
 }
 
-footer section ul {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+footer h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
 }
 
-footer section ul li h2 {
-  font-family: "Nunito", sans-serif;
-  font-size: 2rem;
-  padding-bottom: 0.5rem;
+footer .divisor {
+  display: flex;
+  gap: 2rem;
 }
 
 footer h2,
 footer a,
 footer p {
   font-family: "Nunito", sans-serif;
-  color: black;
+  color: white;
 }
 
 footer section ul li a:hover {
-  text-decoration: solid underline black 1px;
+  text-decoration: solid underline rgb(255, 255, 255) 1px;
   transition: 1s;
 }
 
@@ -39,11 +37,16 @@ footer #direitos-reservados {
   justify-content: center;
 }
 
-footer #direitos-reservados p {
-  font-size: 1.5rem;
+footer p {
+  font-size: 1rem;
 }
 
 footer #redes-sociais {
+  display: flex;
+  align-items: center;
+}
+
+footer .icones {
   margin-top: 1rem;
   display: flex;
   justify-content: center;
@@ -51,7 +54,7 @@ footer #redes-sociais {
 
 footer #redes-sociais li {
   margin: 0 1rem;
-  background-color: #5c564b;
+  background-color: #5D7344;
   padding: 1rem;
   border-radius: 50%;
   display: flex;
@@ -61,8 +64,22 @@ footer #redes-sociais li {
   height: 2rem;
 }
 
+footer #redes-sociais li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
 @media (max-width: 992px) {
+  footer #nossa-empresa, #atendimento{
+    width: 25rem;
+    margin: 0 auto;
+  }
+  
   footer section {
+    margin: 0 auto;
     flex-wrap: wrap;
     gap: 0.5rem;
     justify-content: space-around;
@@ -73,31 +90,7 @@ footer #redes-sociais li {
     justify-content: center;
   }
 
-  footer #redes-sociais {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-    gap: 0.1rem;
-  }
   footer section {
     padding: 1rem;
-  }
-}
-
-@media (max-width: 576px) {
-  footer #redes-sociais {
-    display: none;
-  }
-  footer section {
-    padding: 1rem;
-  }
-
-  footer section ul li h2 {
-    font-size: 1.5rem;
-  }
-
-  footer #direitos-reservados p {
-    font-size: 1rem;
   }
 }

@@ -3,8 +3,9 @@ body {
 }
 
 .container-cart h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
+
 .container-cart h3 {
   font-size: 1.5rem;
 }
@@ -16,22 +17,25 @@ body {
 }
 
 .cart-item-image {
-  width: 20rem;
+  width: 10rem;
   border-radius: 10px;
 }
+
 .cart-items {
   display: flex;
-  gap: 2rem;
+  gap: 5rem;
 }
+
 .cart-item-details .quantity,
-.price {
+.price,
+.product-title {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 15rem;
 }
 
 .cart-item-details div h3 {
-  font-size: 1rem;
   max-width: 25rem;
   font-weight: 300;
 }
@@ -45,48 +49,47 @@ body {
 }
 
 #subtotal-cart {
-  background-color: #5c564b;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   border-radius: 2rem;
-  padding: 2rem 4rem;
-
   h1 {
-    font-size: 2.5rem;
-    border-top: 2px solid white;
+    font-size: 1.8rem;
+    border-top: 2px solid #ffffff;
     padding-top: 0.5rem;
   }
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+  p {
+    font-size: 1.2rem;
+    padding-bottom: 0.5rem;
   }
 }
 
 #container-info-total {
-  margin-top: 2rem;
+  background-color: #534236;
+  border: 0.2rem solid #534236;
+  border-radius: 1rem;
   display: flex;
-  gap: 9rem;
+  gap: 8rem;
   align-items: center;
-  max-width: 1240px;
+  padding: 2rem 5rem;
+  margin-bottom: 2rem;
 }
 
 .adress {
-  padding: 1rem;
-  color: black;
+  color: rgb(255, 255, 255);
 
   h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   p {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
   }
 
   .cep {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid rgb(255, 255, 255);
   }
 
   .buttons {
-    margin: 2rem 0 2rem 0;
+    margin-top: 2rem;
     display: flex;
     gap: 2rem;
   }
@@ -99,11 +102,15 @@ body {
   margin-top: 3rem;
 
   a {
-    color: white;
+    color: #ffffff;
   }
 }
-
-@media (max-width: 768px) {
+@media (max-width: 1225px) {
+  .cart-items {
+    gap: 0;
+  }
+}
+@media (max-width: 981px) {
   .cart-item-details .quantity input {
     width: 2rem;
     margin: 0 auto;
@@ -172,7 +179,7 @@ body {
   }
 
   .adress .buttons {
-    margin: 1rem 0;
+    flex-direction: column;
   }
 
   .concluir-compra {
@@ -180,4 +187,33 @@ body {
     align-items: center;
     gap: 2rem;
   }
+  #container-info-total {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.container-quantity .increment,
+.decrement {
+  color: white;
+  background-color: #5d7344;
+  border-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.container-quantity input .quantity {
+  font-size: 16px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }

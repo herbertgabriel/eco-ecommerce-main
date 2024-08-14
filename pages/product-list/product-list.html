@@ -14,36 +14,32 @@
   <header>
     <nav id="navbar">
       <section class="hd-grid">
-        <div class="left-icons">
-          <div class="hamburger-menu">
-          </div>
-          <span class="material-symbols-outlined">search</span>
-        </div>
-
+        <div class="hamburger-menu"></div>
         <a href="../../index.html" class="logo">Eco&Commerce</a>
 
-        <div class="right-icons">
+        <ul class="categorias">
+          <li><a href="../products/products.html?category=clothes">Roupas</a></li>
+          <li><a href="../products/products.html?category=cosmetics">Cosméticos</a></li>
+          <li><a href="../products/products.html?category=materials">Materiais</a></li>
+          <li><a href="../products/products.html?category=handmade">Artesanato</a></li>
+          <li><a href="../products/products.html?category=plants">Plantas</a></li>
+          <li><a href="../products/products.html?category=furniture">Móveis</a></li>
+        </ul>
+
+        <div class="icons">
+          <div class="container-search">
+            <input type="text" placeholder="O que você busca hoje?" name="text" class="input">
+          </div>
           <a href="../login/login.html"><span class="material-symbols-outlined">person</span></a>
           <a href="#" id="cartToggle"><span class="material-symbols-outlined">shopping_cart</span></a>
-          <a href=""><span class="material-symbols-outlined">favorite</span></a>
+          <a href="#"><span class="material-symbols-outlined">favorite</span></a>
         </div>
       </section>
-
-      <ul class="categorias">
-        <li><a href="../products/products.html?category=clothes">Roupas</a></li>
-        <li><a href="../products/products.html?category=cosmetics">Cosméticos</a></li>
-        <li><a href="../products/products.html?category=materials">Materiais</a></li>
-        <li><a href="../products/products.html?category=handmade">Artesanato</a></li>
-        <li><a href="../products/products.html?category=plants">Plantas</a></li>
-        <li><a href="../products/products.html?category=furniture">Móveis</a></li>
-      </ul>
-
     </nav>
-
-  </header>
+</header>
 
   <main>
-    <div class="route"></div>
+    <div class="route" id="inicio"></div>
     <section class="container-cart">
       <ul id="cartList-products"></ul>
       <div id="container-info-total">
@@ -61,39 +57,62 @@
 
     </section>
     <div id="cartPopup" class="cart-popup"></div>
+    <div id="voltar-inicio">
+      <h2><a href="#inicio">Voltar ao Início</a></h2>
+    </div>
   </main>
 
   <footer>
-    <section>
-      <ul class="nossa-empresa">
-        <li>
-          <h2>Nossa Empresa</h2>
-        </li>
-        <li><a href="#">Sustentabilidade</a></li>
-        <li><a href="#">Sobre o Eco&Commerce</a></li>
-        <li><a href="#">Políticas de Privacidade</a></li>
-        <li><a href="#">Termo e Condições Gerais de Uso</a></li>
-        <li><a href="#">Políticas de Troca e Devolução</a></li>
-        <li><a href="#">Newletter</a></li>
-        <li><a href="#">Blog</a></li>
-      </ul>
-      <ul class="atendimento">
-        <li>
-          <h2>Atendimento</h2>
-        </li>
-        <li><a href="#">Políticas de Pagamento</a></li>
-        <li><a href="#">Entre em Contato</a></li>
-        <li><a href="#">Centro de Preferência</a></li>
-        <li><a href="#">Perguntas Frequentes</a></li>
-        <li><a href="#">Acessibilidade</a></li>
-        <li><a href="#">Ajuda</a></li>
-      </ul>
-      <ul id="redes-sociais">
-        <li><a href="#"><img src="../../imgs/Icons/instagram.svg" /></a></li>
-        <li><a href="#"><img src="../../imgs/Icons/facebook.svg" /></a></li>
-        <li><a href="#"><img src="../../imgs/Icons/twitter.svg" /></a></li>
-        <li><a href="#"><img src="../../imgs/Icons/tiktok.svg" /></a></li>
-      </ul>
+    <section id="about">
+      <div id="nossa-empresa">
+        <h2>Nossa Empresa</h2>
+        <div class="divisor">
+          <div>
+            <ul>
+              <li><a href="#">Sustentabilidade</a></li>
+              <li><a href="#">Sobre o Eco&Commerce</a></li>
+              <li><a href="#">Políticas de Privacidade</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li><a href="#">Termo e Condições Gerais de Uso</a></li>
+              <li><a href="#">Políticas de Troca e Devolução</a></li>
+              <li><a href="#">Newsletter</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="atendimento">
+        <h2>Atendimento</h2>
+        <div class="divisor">
+          <div>
+            <ul>
+              <li><a href="#">Políticas de Pagamento</a></li>
+              <li><a href="#">Entre em Contato</a></li>
+              <li><a href="#">Centro de Preferência</a></li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li><a href="#">Perguntas Frequentes</a></li>
+              <li><a href="#">Acessibilidade</a></li>
+              <li><a href="#">Ajuda</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="redes-sociais">
+        <ul class="icones">
+          <li><a href="#"><img src="../../imgs/Icons/instagram.svg" /></a></li>
+          <li><a href="#"><img src="../../imgs/Icons/facebook.svg" /></a></li>
+          <li><a href="#"><img src="../../imgs/Icons/twitter.svg" /></a></li>
+          <li><a href="#"><img src="../../imgs/Icons/tiktok.svg" /></a></li>
+        </ul>
+      </div>
     </section>
     <div id="direitos-reservados">
       <p>© ECO&COMMERCE 2024 - Todos os direitos reservados</p>
